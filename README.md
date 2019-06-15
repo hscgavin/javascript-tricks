@@ -16,3 +16,20 @@ console.log(isObject({foo: 'bar'})) //true
 console.log(isNumber(5)); // true
 console.log(isArray([])); // true
 ```
+
+## Error Handling with async/await
+
+If you don't like to wrap async/await inside a try/catch block when everytime you use it. try this:
+```js
+const errorHandled = async (asyncFunc) => {
+  try {
+    const res = await asyncFunc();
+    return [null, res];
+  } catch (error) {
+    return [error, null]
+  }
+}
+
+// usage
+const [error, res] = await errorHandled(asyncFunc)
+```
