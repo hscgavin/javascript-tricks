@@ -33,3 +33,33 @@ const errorHandled = async (asyncFunc) => {
 // usage
 const [error, res] = await errorHandled(asyncFunc)
 ```
+
+## Escape html to prevent xss
+
+```js
+const escapeHTML = str => {
+  str.replace(
+    /[&<>'"]/g,
+    tag =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "'": "&#39;",
+        '"': "&quot;"
+      }[tag] || tag)
+  );
+};
+```
+
+## Detect device type - mobile or desktop
+
+```js
+const detectDeviceType = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+    ? "Mobile"
+    : "Desktop";
+};
+```
