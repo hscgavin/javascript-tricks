@@ -3,7 +3,9 @@ JavaScript variables can hold many data types: numbers, strings, booleans, objec
 
 Every object has a toString() method that is automatically called when the object is to be represented as a text value or when an object is referred to in a manner in which a string is expected. By default, the toString()method is inherited by every object descended from Object. If this method is not overridden in a custom object,toString() returns “[object type]”, where type is the object type.
 
-We can leverage it to check data type:
+We can leverage it.
+
+## to check data type:
 
 ```js
 // ES6
