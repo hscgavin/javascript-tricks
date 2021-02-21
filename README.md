@@ -1,5 +1,4 @@
 # JavaScript Tricks
-----
 
 ## Check JavaScript Data Types
 JavaScript variables can hold many data types: numbers, strings, booleans, objects, array and more.
